@@ -14,13 +14,13 @@ function nomearTags(tag,texto){
 };
 function mensagemInicial(){
     nomearTags('h1', 'Jogo do número secreto');
-    nomearTags('p', 'Escolha um número entre 1 e 100');
+    nomearTags('p', 'Escolha um número entre 1 e 10');
 };
 
 mensagemInicial();
 
 function randomNumber(){
-    let numeroMaximo = 100;
+    let numeroMaximo = 2;
     let numeroEscolhido = parseInt(Math.random()*numeroMaximo+1);
     let tamanhoLista = numerosSorteados.length;
     if (tamanhoLista == numeroMaximo){
@@ -62,6 +62,7 @@ function randomNumber(){
     chute = document.querySelector('input');
     chute.value = '';  
  };
+
 
  function reiniciar(){
     numeroSecreto = randomNumber();
